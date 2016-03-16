@@ -8,7 +8,3 @@ end
 Then(/^I should stay on login page$/) do
   WordpressSpike::Pages::LoginPage.validate_active(@driver)
 end
-
-Then(/^I should be taken to home page$/) do
-  WordpressSpike::Pages::HomePage.validate_active(@driver)
-end
