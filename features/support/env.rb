@@ -1,8 +1,8 @@
 $:.unshift("#{File.dirname(__FILE__)}/../../lib/")
 
-require 'wordpress_spike'
-require 'rubygems'
 require 'appium_lib'
+require 'yaml'
+require 'wordpress_spike'
 
 SERVER_URL = 'http://localhost:4723/wd/hub'
 PORT = 4723
@@ -24,6 +24,7 @@ Before do
   }
 
   @driver = Appium::Driver.new(desired_capabilities)
+  @settings = YAML.load_file(File.expand_path('../../config.yml', File.dirname(__FILE__)))
   @driver.start_driver
   @driver.set_wait(TWENTY_SECONDS)
 end
