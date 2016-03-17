@@ -11,7 +11,7 @@ TWENTY_SECONDS = 20
 Before do
   desired_capabilities = {
       caps: {
-          platformName: :android,
+          platformName: :Android,
           appActivity: '.ui.WPLaunchActivity',
           appPackage: 'org.wordpress.android',
           deviceName: 'Android',
