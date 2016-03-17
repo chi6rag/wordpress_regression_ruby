@@ -1,5 +1,3 @@
-
-
 When(/^I enter Title as "(.*)" and Message as "(.*)"$/) do |title, message|
   new_post_page = WordpressSpike::Pages::NewPostPage.new(@driver)
   device_utility = WordpressSpike::Utility::DeviceUtility.new(@driver)
@@ -24,5 +22,5 @@ And(/^I press Publish$/) do
 end
 
 Then(/^I should be on new post page$/) do
-
+  WordpressSpike::Pages::NewPostPage.validate_active(@driver)
 end

@@ -4,6 +4,7 @@ module WordpressSpike
       TITLE_INPUT_ID = 'post_title'
       CONTENT_INPUT_ID = 'post_content'
       PUBLISH_BUTTON_ID = 'menu_save_post'
+      FIVE_SECONDS = 5
 
       def self.validate_active(driver)
         Selenium::WebDriver::Wait.new(timeout: FIVE_SECONDS).until do
